@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("RANDOM FUNCTION LOG"),document.body.innerHTML="<div>wrks</div>"})();
