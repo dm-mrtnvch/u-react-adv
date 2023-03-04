@@ -1,9 +1,7 @@
 import {render} from "react-dom";
-import {Test} from "./components/Test";
+import {App} from "./App";
 
 render(
-  <div>
-    <Test/>
-  </div>,
+  <App/>,
   document.getElementById('root')
 )
