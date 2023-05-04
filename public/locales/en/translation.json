@@ -1,3 +1,8 @@
 {
-  "test": "test"
+  "test": "test",
+  "main page": "main page",
+  "main": "main",
+  "about": "about",
+  "change-language": "change language",
+  "language": "en"
 }
