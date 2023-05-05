@@ -3,7 +3,9 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
 import {BuildOptions} from "./types/config";
 
+
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
+  const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
   return [
     new webpack.ProgressPlugin(),
@@ -16,6 +18,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
-    })
+    }),
+    isDev && new ReactRefreshWebpackPlugin()
   ]
 }
