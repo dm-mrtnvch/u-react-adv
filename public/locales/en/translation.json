@@ -4,5 +4,6 @@
   "main": "main",
   "about": "about",
   "change-language": "change language",
-  "language": "en"
+  "language": "en",
+  "toggle": "toggle"
 }

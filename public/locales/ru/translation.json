@@ -4,5 +4,6 @@
   "main": "главная",
   "about": "эбаут",
   "change-language": "изменить язык",
-  "language": "ru"
+  "language": "ru",
+  "toggle": "тогл"
 }
