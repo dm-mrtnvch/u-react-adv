@@ -3,3 +3,7 @@
 
 # Dependency directories
 node_modules/
+
+# Folders
+/build
+/storybook-static
