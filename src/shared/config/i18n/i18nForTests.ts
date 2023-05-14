@@ -1,5 +1,5 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
 i18n
   .use(initReactI18next)
@@ -11,6 +11,6 @@ i18n
       escapeValue: false, // not needed for react!!
     },
     resources: { en: { translations: {} } },
-  });
+  })
 
-export default i18n;
+export default i18n

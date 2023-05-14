@@ -8,7 +8,7 @@ function classNames(cls: string, mods: Mods = {}, additional: string[] = []): st
       .filter(([_, value]) => Boolean(value))
       .map(([className]) => className),
   ]
-    .join(' ');
+    .join(' ')
 }
 
-export default classNames;
+export default classNames

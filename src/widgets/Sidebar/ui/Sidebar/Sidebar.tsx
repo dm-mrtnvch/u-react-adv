@@ -1,23 +1,23 @@
-import { useTranslation } from 'react-i18next';
-import classNames from 'shared/lib/classNames/classNames';
-import Button from "shared/ui/Button/Button";
-import LangSwitcher from 'shared/ui/LangSwitcher/LangSwitcher';
-import React, { useState } from 'react';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
-import cls from './Sidebar.module.scss';
+import { useTranslation } from 'react-i18next'
+import classNames from 'shared/lib/classNames/classNames'
+import Button from 'shared/ui/Button/Button'
+import LangSwitcher from 'shared/ui/LangSwitcher/LangSwitcher'
+import React, { useState } from 'react'
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
+import cls from './Sidebar.module.scss'
 
 interface SidebarProps {
   className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false)
 
-  const { t } = useTranslation('toggle');
+  const { t } = useTranslation('toggle')
 
   const onToggle = () => {
-    setCollapsed((prev) => !prev);
-  };
+    setCollapsed((prev) => !prev)
+  }
 
   return (
     <div
@@ -36,5 +36,5 @@ export const Sidebar = ({ className }: SidebarProps) => {
         <LangSwitcher className={cls.lang} />
       </div>
     </div>
-  );
-};
+  )
+}
