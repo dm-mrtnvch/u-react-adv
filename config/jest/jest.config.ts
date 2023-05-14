@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'path'
 
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
@@ -39,9 +39,7 @@ export default {
 
   // An array of file extensions your modules use
 
-
   // The root directory that Jest should scan for tests and modules within
-
 
   // The glob patterns Jest uses to detect test files
 
@@ -129,8 +127,6 @@ export default {
   //   "<rootDir>"
   // ],
 
-
-
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],
 
@@ -188,4 +184,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}
