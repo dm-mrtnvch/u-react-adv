@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
 import React from 'react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 
 export default {
   title: 'shared/Button',
@@ -29,5 +29,69 @@ export const OutlineDark = Template.bind({})
 OutlineDark.args = {
   children: 'TEXT',
   theme: ButtonTheme.OUTLINE,
+}
+
+export const BackgroundTheme = Template.bind({})
+BackgroundTheme.args = {
+  children: 'TEXT',
+  theme: ButtonTheme.BACKGROUND,
+}
+
+export const BackgroundInverted = Template.bind({})
+BackgroundInverted.args = {
+  children: 'TEXT',
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+}
+
+export const SquareButton = Template.bind({})
+SquareButton.args = {
+  children: 'TEXT',
+  theme: ButtonTheme.OUTLINE,
+  square: true,
+}
+
+export const SquareButtonM = Template.bind({})
+SquareButtonM.args = {
+  children: '>',
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+  square: true,
+  size: ButtonSize.M,
+}
+
+export const SquareButtonL = Template.bind({})
+SquareButtonL.args = {
+  children: '>',
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+  square: true,
+  size: ButtonSize.L,
+}
+
+export const SquareButtonXL = Template.bind({})
+SquareButtonXL.args = {
+  children: '>',
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+  square: true,
+  size: ButtonSize.XL,
+}
+
+export const OutlineSizeM = Template.bind({})
+OutlineSizeM.args = {
+  children: 'TEXT',
+  theme: ButtonTheme.OUTLINE,
+  size: ButtonSize.M,
+}
+
+export const OutlineSizeL = Template.bind({})
+OutlineSizeL.args = {
+  children: 'TEXT',
+  theme: ButtonTheme.OUTLINE,
+  size: ButtonSize.L,
+}
+
+export const OutlineSizeXL = Template.bind({})
+OutlineSizeXL.args = {
+  children: 'TEXT',
+  theme: ButtonTheme.OUTLINE,
+  size: ButtonSize.XL,
 }
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)]

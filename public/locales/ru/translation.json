@@ -4,7 +4,8 @@
   "main": "главная",
   "about": "эбаут",
   "change-language": "изменить язык",
-  "language": "ru",
+  "language": "русский",
+  "lang": "ру",
   "toggle": "тогл",
   "no page": "пэйдж нот фаунд"
 }
