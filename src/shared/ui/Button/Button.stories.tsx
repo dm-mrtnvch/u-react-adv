@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
 import React from 'react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import Button, { ThemeButton } from 'shared/ui/Button/Button'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 export default {
   title: 'shared/Button',
@@ -22,12 +22,12 @@ Primary.args = {
 export const Clear = Template.bind({})
 Clear.args = {
   children: 'TEXT',
-  theme: ThemeButton.CLEAR,
+  theme: ButtonTheme.CLEAR,
 }
 
 export const OutlineDark = Template.bind({})
 OutlineDark.args = {
   children: 'TEXT',
-  theme: ThemeButton.OUTLINE,
+  theme: ButtonTheme.OUTLINE,
 }
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)]

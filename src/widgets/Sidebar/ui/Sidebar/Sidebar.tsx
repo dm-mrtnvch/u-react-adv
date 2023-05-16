@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import classNames from 'shared/lib/classNames/classNames'
-import Button from 'shared/ui/Button/Button'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 import LangSwitcher from 'shared/ui/LangSwitcher/LangSwitcher'
 import React, { useState } from 'react'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
@@ -19,6 +19,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     setCollapsed((prev) => !prev)
   }
 
+  const test = 'test22222'
   return (
     <div
       data-testid="sidebar"
@@ -28,8 +29,13 @@ export const Sidebar = ({ className }: SidebarProps) => {
         data-testid="sidebar-toggle"
         type="button"
         onClick={onToggle}
+        className={cls.collapseBtn}
+        theme={ButtonTheme.BACKGROUND_INVERTED}
+        size={ButtonSize.L}
+        square
       >
-        {t('toggle')}
+        {/* {t('toggle')} */}
+        {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
