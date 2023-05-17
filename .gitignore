@@ -7,3 +7,7 @@ node_modules/
 # Folders
 /build
 /storybook-static
+
+# Files
+.loki/report.html
+.loki/report.json
