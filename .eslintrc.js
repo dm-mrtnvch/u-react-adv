@@ -50,6 +50,7 @@ module.exports = {
     'max-len': ['error', { ignoreComments: true, code: 120 }],
     semi: ['warn', 'never'],
     'react/jsx-tag-spacing': ['warn', { closingSlash: 'never' }],
+    'linebreak-style': 'off',
   },
   globals: {
     __IS_DEV__: true,

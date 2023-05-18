@@ -1,7 +1,6 @@
 import { fireEvent } from '@storybook/testing-library'
 import { screen } from '@testing-library/react'
 import { componentRender } from 'shared/lib/tests/componentRender/componentRender'
-import { RenderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation'
 import { Sidebar } from 'widgets/Sidebar'
 
 describe('Sidebar', () => {
