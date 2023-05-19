@@ -21,6 +21,7 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'i18next',
+    'react-hooks',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -53,6 +54,8 @@ module.exports = {
     semi: ['warn', 'never'],
     'react/jsx-tag-spacing': ['warn', { closingSlash: 'never' }],
     'linebreak-style': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,

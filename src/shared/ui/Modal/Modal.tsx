@@ -23,8 +23,8 @@ export const Modal = (props: ModalProps) => {
   } = props
 
   const [isClosing, setIsClosing] = useState(false)
-  const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
+  const timerRef = useRef<ReturnType<typeof setTimeout>>()
   const { t } = useTranslation()
 
   const mods: Record<string, boolean> = {
@@ -32,7 +32,7 @@ export const Modal = (props: ModalProps) => {
     [cls.isClosing]: isClosing,
   }
 
-  const closeHandler = () => {
+  const closeHandler = useCallback(() => {
     if (onClose) {
       setIsClosing(true)
       timerRef.current = setTimeout(() => {
@@ -40,7 +40,7 @@ export const Modal = (props: ModalProps) => {
         setIsClosing(false)
       }, ANIMATION_DELAY)
     }
-  }
+  }, [onClose])
 
   const onKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') { closeHandler() }
@@ -51,14 +51,12 @@ export const Modal = (props: ModalProps) => {
   }
 
   useEffect(() => {
-    if (isOpen) {
-      window.addEventListener('keydown', onKeyDown)
-    }
+    if (isOpen) { window.addEventListener('keydown', onKeyDown) }
     return () => {
       clearTimeout(timerRef.current)
       window.removeEventListener('keydown', onKeyDown)
     }
-  }, [])
+  }, [isOpen, onKeyDown])
 
   return (
     <div className={classNames(cls.Modal, mods, [className])}>
