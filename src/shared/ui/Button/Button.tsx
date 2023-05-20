@@ -4,6 +4,7 @@ import cls from './Button.module.scss'
 
 export enum ButtonTheme {
   CLEAR = 'clear',
+  CLEAR_INVERTED = 'clearInverted',
   OUTLINE = 'outline',
   BACKGROUND = 'background',
   BACKGROUND_INVERTED = 'backgroundInverted',
@@ -31,8 +32,6 @@ export const Button: FC<ButtonProps> = (props) => {
     size = ButtonSize.XL,
     ...otherProps
   } = props
-
-  console.log('size', size)
 
   const mods: Record<string, boolean> = {
     [cls[theme]]: true,
