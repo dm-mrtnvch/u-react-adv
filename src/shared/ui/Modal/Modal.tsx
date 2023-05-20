@@ -3,6 +3,7 @@ import React, {
 } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Portal } from 'shared/ui/Portal/Portal'
 import cls from './Modal.module.scss'
 
 interface ModalProps {
@@ -43,7 +44,9 @@ export const Modal = (props: ModalProps) => {
   }, [onClose])
 
   const onKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Escape') { closeHandler() }
+    if (e.key === 'Escape') {
+      closeHandler()
+    }
   }, [closeHandler])
 
   const onContentClick = (e: React.MouseEvent) => {
@@ -51,7 +54,9 @@ export const Modal = (props: ModalProps) => {
   }
 
   useEffect(() => {
-    if (isOpen) { window.addEventListener('keydown', onKeyDown) }
+    if (isOpen) {
+      window.addEventListener('keydown', onKeyDown)
+    }
     return () => {
       clearTimeout(timerRef.current)
       window.removeEventListener('keydown', onKeyDown)
@@ -59,15 +64,17 @@ export const Modal = (props: ModalProps) => {
   }, [isOpen, onKeyDown])
 
   return (
-    <div className={classNames(cls.Modal, mods, [className])}>
-      <div className={cls.overlay} onClick={closeHandler}>
-        <div
-          className={cls.content}
-          onClick={onContentClick}
-        >
-          {children}
+    <Portal>
+      <div className={classNames(cls.Modal, mods, [className])}>
+        <div className={cls.overlay} onClick={closeHandler}>
+          <div
+            className={cls.content}
+            onClick={onContentClick}
+          >
+            {children}
+          </div>
         </div>
       </div>
-    </div>
+    </Portal>
   )
 }
