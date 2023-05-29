@@ -10,5 +10,8 @@
   "lang": "en",
   "sing in": "sing in",
   "user name": "user name",
-  "password": "password"
+  "password": "password",
+  "authorization form": "authorization form",
+  "incorrect login or password": "incorrect login or password",
+  "sign out": "sign out"
 }
