@@ -1,7 +1,10 @@
+import { Suspense } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Loader } from 'shared/ui/Loader/Loader'
 import { Modal } from 'shared/ui/Modal/Modal'
-import { LoginForm } from '../LoginForm/LoginForm'
+import { LoginFormAsync } from '../LoginForm/LoginForm.async'
+// import { LoginForm } from '../LoginForm/LoginForm'
 
 interface LoginModalProps {
   className?: string
@@ -25,7 +28,10 @@ export const LoginModal = (props: LoginModalProps) => {
       className={classNames('', {}, [className])}
       lazy
     >
-      <LoginForm />
+      {/* <LoginForm /> */}
+      <Suspense fallback={<Loader />}>
+        <LoginFormAsync />
+      </Suspense>
     </Modal>
   )
 }

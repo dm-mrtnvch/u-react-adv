@@ -19,14 +19,15 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     }),
   ]
 
+  plugins.push(new BundleAnalyzerPlugin({
+    openAnalyzer: true,
+  }))
+
   if (isDev) {
     // eslint-disable-next-line global-require
     const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
     plugins.push(new ReactRefreshWebpackPlugin())
-    plugins.push(new BundleAnalyzerPlugin({
-      openAnalyzer: true,
-    }))
   }
 
   return plugins
