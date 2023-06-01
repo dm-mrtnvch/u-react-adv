@@ -1,4 +1,3 @@
-import { ReduxStoreWithManager } from 'app/providers/StoreProvider'
 import { memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector, useStore } from 'react-redux'
@@ -33,7 +32,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
   const error = useSelector(getLoginError)
 
   const onChangeUserName = useCallback((value: string) => {
-    dispatch(loginActions.setUserName(value))
+    dispatch(loginActions.setUsername(value))
   }, [dispatch])
 
   const onChangePassword = useCallback((value: string) => {
