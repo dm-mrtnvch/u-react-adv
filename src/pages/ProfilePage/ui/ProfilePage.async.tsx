@@ -1,9 +1,9 @@
 import { lazy } from 'react'
 
-export const AboutPageAsync = lazy(() => new Promise((resolve) => {
+export const ProfilePageAsync = lazy(() => new Promise((resolve) => {
   setTimeout(() => {
     // DO NOT USE ON PRODUCTION
     // @ts-ignore
-    resolve(import('./AboutPage'))
+    resolve(import('./ProfilePage'))
   }, 1000)
 }))

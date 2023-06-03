@@ -26,6 +26,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "name",
+    "lastname": "surname",
+    "age": 99,
+    "currency": "USD",
+    "country": "country name",
+    "city": "city name",
+    "username": "admin",
+    "avatar": "https://robohash.org/honey?set=set1"
   }
 }
