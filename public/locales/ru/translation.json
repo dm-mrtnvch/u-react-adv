@@ -13,5 +13,9 @@
   "password": "password",
   "authorization form": "authorization form",
   "incorrect login or password": "incorrect login or password",
-  "sign out": "sign out"
+  "sign out": "sign out",
+  "Profile": "Profile",
+  "Edit": "Edit",
+  "surname": "surname",
+  "name": "name"
 }

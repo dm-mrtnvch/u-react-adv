@@ -26,8 +26,8 @@
     }
   ],
   "profile": {
-    "first": "name",
-    "lastname": "surname",
+    "first": "John",
+    "lastname": "Doe",
     "age": 99,
     "currency": "USD",
     "country": "country name",
