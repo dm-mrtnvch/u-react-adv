@@ -1,6 +1,7 @@
 import {
-  AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
+  AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit'
+import { Dispatch, CombinedState } from 'redux'
 import { To } from '@remix-run/router'
 import { AxiosInstance, AxiosStatic } from 'axios'
 import { CounterSchema } from 'entities/Counter'
@@ -15,7 +16,7 @@ export interface StateSchema {
 
   // async reducers
   loginForm?: LoginSchema
-  profile: ProfileSchema
+  profile?: ProfileSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
@@ -38,5 +39,6 @@ export interface ThunkExtraArg {
 
 export interface ThunkConfig<T> {
   rejectValue: T,
-  extra: ThunkExtraArg
+  extra: ThunkExtraArg,
+  dispatch?: Dispatch
 }
