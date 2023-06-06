@@ -17,5 +17,9 @@
   "Profile": "Profile",
   "Edit": "Edit",
   "surname": "surname",
-  "name": "name"
+  "name": "name",
+  "error-while-profile-loading": "error-while-profile-loading",
+  "please-reload-thepage": "please-reload-thepage",
+  "Cancel": "Cancel",
+  "lastname": "lastname"
 }
