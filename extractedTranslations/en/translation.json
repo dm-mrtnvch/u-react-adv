@@ -4,12 +4,15 @@
   "Name": "",
   "PROFILE PAGE": "PROFILE PAGE",
   "Profile": "Profile",
+  "Save": "Save",
   "Surname": "",
   "about": "",
   "about page": "",
+  "age": "age",
   "authorisation form": "",
   "authorization form": "authorization form",
   "blabla": "",
+  "city": "city",
   "decrement": "decrement",
   "error": "error",
   "error while profile loading": "error while profile loading",
@@ -33,6 +36,10 @@
   "toglle": "toglle",
   "user name": "user name",
   "Обновить страницу": "Обновить страницу",
+  "Отменить": "Отменить",
   "Переключить": "",
-  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка"
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Профиль": "Профиль",
+  "Редактировать": "Редактировать",
+  "Сохранить": "Сохранить"
 }

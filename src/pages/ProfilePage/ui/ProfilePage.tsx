@@ -1,7 +1,7 @@
 import {
   fetchProfileData,
   getProfileData,
-  getProfileError,
+  getProfileError, getProfileForm,
   getProfileIsLoading, getProfileReadonly, profileActions,
   ProfileCard,
   profileReducer,
@@ -25,7 +25,7 @@ interface ProfilePageProps {
 const ProfilePage = ({ className }: ProfilePageProps) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
-  const data = useSelector(getProfileData)
+  const formData = useSelector(getProfileForm)
   const isLoading = useSelector(getProfileIsLoading)
   const error = useSelector(getProfileError)
   const readonly = useSelector(getProfileReadonly)
@@ -46,17 +46,31 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     }))
   }, [dispatch])
 
+  const onChangeCity = useCallback((value: string) => {
+    dispatch(profileActions.updateProfile({
+      city: value || '',
+    }))
+  }, [dispatch])
+
+  const onChangeAge = useCallback((value: string) => {
+    dispatch(profileActions.updateProfile({
+      age: Number(value || 0),
+    }))
+  }, [dispatch])
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames('', {}, [className])}>
         <ProfilePageHeader />
         <ProfileCard
-          data={data}
+          data={formData}
           isLoading={isLoading}
           error={error}
           readonly={readonly}
           onChangeFirstname={onChangeFirstname}
           onChangeLastname={onChangeLastname}
+          onChangeCity={onChangeCity}
+          onChangeAge={onChangeAge}
         />
       </div>
     </DynamicModuleLoader>

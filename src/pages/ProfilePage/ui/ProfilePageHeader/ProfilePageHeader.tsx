@@ -1,7 +1,7 @@
-import { getProfileReadonly, profileActions } from 'entities/Profile'
+import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
@@ -23,7 +23,11 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch])
 
   const onCancelEdit = useCallback(() => {
-    dispatch(profileActions.setReadonly(true))
+    dispatch(profileActions.cancelEdit())
+  }, [dispatch])
+
+  const onSave = useCallback(() => {
+    dispatch(updateProfileData())
   }, [dispatch])
 
   return (
@@ -40,13 +44,22 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
           </Button>
         )
         : (
-          <Button
-            theme={ButtonTheme.OUTLINE}
-            className={cls.editBtn}
-            onClick={onCancelEdit}
-          >
-            {t('Cancel')}
-          </Button>
+          <>
+            <Button
+              theme={ButtonTheme.OUTLINE_RED}
+              className={cls.editBtn}
+              onClick={onCancelEdit}
+            >
+              {t('Cancel')}
+            </Button>
+            <Button
+              theme={ButtonTheme.OUTLINE}
+              className={cls.saveBtn}
+              onClick={onSave}
+            >
+              {t('Save')}
+            </Button>
+          </>
         )}
     </div>
   )
