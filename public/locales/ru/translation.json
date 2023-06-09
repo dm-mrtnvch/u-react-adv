@@ -23,5 +23,7 @@
   "Cancel": "Cancel",
   "lastname": "lastname",
   "Save": "Save",
-  "username": "username"
+  "username": "username",
+  "select-currency": "select-currency",
+  "select-country": "select-country"
 }
