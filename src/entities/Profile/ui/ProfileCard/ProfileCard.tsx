@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Input } from 'shared/ui/Input/Input'
 import { Loader } from 'shared/ui/Loader/Loader'
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
@@ -17,6 +17,8 @@ interface ProfileCardProps {
   onChangeLastname?: (value: string) => void;
   onChangeCity?: (value: string) => void;
   onChangeAge?: (value: string) => void;
+  onChangeUsername?: (value: string) => void;
+  onChangeAvatar?: (value: string) => void;
 }
 
 export const ProfileCard = ({
@@ -29,6 +31,8 @@ export const ProfileCard = ({
   onChangeLastname,
   onChangeCity,
   onChangeAge,
+  onChangeUsername,
+  onChangeAvatar,
 }: ProfileCardProps) => {
   const { t } = useTranslation()
 
@@ -56,6 +60,11 @@ export const ProfileCard = ({
   return (
     <div className={classNames(cls.ProfileCard, {}, [className])}>
       <div className={cls.data}>
+        {data?.avatar && (
+          <div className={cls.avatarWrapper}>
+            <Avatar src={data?.avatar} />
+          </div>
+        )}
         <Input
           value={data?.first}
           placeholder={t('name')}
@@ -85,7 +94,20 @@ export const ProfileCard = ({
           onChange={onChangeCity}
           readonly={readonly}
         />
-
+        <Input
+          value={data?.username}
+          placeholder={t('username')}
+          className={cls.input}
+          onChange={onChangeUsername}
+          readonly={readonly}
+        />
+        <Input
+          value={data?.avatar}
+          placeholder={t('avatar')}
+          className={cls.input}
+          onChange={onChangeAvatar}
+          readonly={readonly}
+        />
       </div>
     </div>
   )
