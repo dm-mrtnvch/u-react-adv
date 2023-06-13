@@ -1,6 +1,7 @@
 import {
   AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit'
+import { ArticleDetailsSchema } from 'entities/Article'
 import { Dispatch, CombinedState } from 'redux'
 import { To } from '@remix-run/router'
 import { AxiosInstance, AxiosStatic } from 'axios'
@@ -17,6 +18,7 @@ export interface StateSchema {
   // async reducers
   loginForm?: LoginSchema
   profile?: ProfileSchema
+  articleDetails?: ArticleDetailsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

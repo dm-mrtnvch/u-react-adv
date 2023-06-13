@@ -1,3 +1,4 @@
+import { ArticleDetails } from 'entities/Article'
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -13,7 +14,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   return (
     // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-      ARTICLE DETAILS PAGE
+      <ArticleDetails />
     </div>
   )
 }

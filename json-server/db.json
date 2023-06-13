@@ -11,18 +11,89 @@
       "userId": "2"
     }
   ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Chemical Element: Lead",
+      "subtitle": "Properties and Applications",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5jJgYEbg6zWMNlBZWnZcklY9-JjHb7INXs_ZU9aQfkQ&s",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "type": ["Chemistry"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Abstract Title",
+          "paragraphs": [
+            "Abstract text about the chemical element lead.",
+            "Lead is a heavy metal with the atomic number 82 and symbol Pb (from the Latin word 'Plumbum'). It has high density and is known for its malleability and corrosion resistance.",
+            "Lead has various applications in industries such as construction, batteries, and radiation shielding. However, due to its toxicity, efforts have been made to minimize its use in consumer products.",
+            "This abstract provides an overview of the properties, uses, and potential health risks associated with lead."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Lead_drop_after_solidification.JPG/250px-Lead_drop_after_solidification.JPG",
+          "title": "Image 1 - Abstract Image"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "const elementSymbol = 'Pb';\nconsole.log('The symbol of lead is: ' + elementSymbol);"
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "title": "Abstract Title 2",
+          "paragraphs": [
+            "Additional abstract text about the chemical element lead.",
+            "Lead is known for its widespread historical use, particularly in plumbing, batteries, and ammunition. However, due to its adverse effects on human health and the environment, regulations have been put in place to restrict its use in many applications.",
+            "This abstract provides insights into the historical significance, current regulations, and alternative materials being explored as substitutes for lead."
+          ]
+        },
+        {
+          "id": "5",
+          "type": "IMAGE",
+          "src": "https://example.com/image2.png",
+          "title": "Image 2 - Abstract Image"
+        }
+      ]
+    }
+  ],
   "comments": [
     {
       "id": "1",
-      "body": "some comment",
-      "postId": "1"
+      "text": "Some comment",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "Another comment",
+      "articleId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "3",
+      "text": "Third comment",
+      "articleId": "1",
+      "userId": "2"
     }
   ],
   "users": [
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "123",
+      "role": "USER"
     }
   ],
   "profile": {
