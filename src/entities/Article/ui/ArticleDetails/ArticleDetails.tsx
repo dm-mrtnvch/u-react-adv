@@ -1,11 +1,15 @@
 import { memo, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg'
+import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
+import { Icon } from 'shared/ui/Icon/Icon'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import { Text, TextAlign } from 'shared/ui/Text/Text'
+import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text'
 import {
   getArticleDetailsData,
   getArticleDetailsError,
@@ -28,7 +32,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   const { className, id } = props
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
-  const data = useSelector(getArticleDetailsData)
+  const article = useSelector(getArticleDetailsData)
   const isLoading = useSelector(getArticleDetailsIsLoading)
   const error = useSelector(getArticleDetailsError)
 
@@ -57,7 +61,29 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     )
   } else {
     content = (
-      <div>ArticleDetails</div>
+      <>
+        <div className={cls.avatarWrapper}>
+          <Avatar
+            size={200}
+            src={article?.img}
+            className={cls.avatar}
+          />
+        </div>
+        <Text
+          className={cls.title}
+          title={article?.title}
+          text={article?.subtitle}
+          size={TextSize.L}
+        />
+        <div className={cls.articleInfo}>
+          <Icon Svg={EyeIcon} className={cls.icon} />
+          <Text text={String(article?.views)} />
+        </div>
+        <div className={cls.articleInfo}>
+          <Icon Svg={CalendarIcon} className={cls.icon} />
+          <Text text={article?.createdAt} />
+        </div>
+      </>
     )
   }
 
