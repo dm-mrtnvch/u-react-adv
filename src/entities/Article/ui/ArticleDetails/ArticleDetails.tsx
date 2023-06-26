@@ -1,4 +1,4 @@
-import { memo, useEffect } from 'react'
+import { memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg'
@@ -10,6 +10,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Icon } from 'shared/ui/Icon/Icon'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text'
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
 import {
   getArticleDetailsData,
   getArticleDetailsError,
@@ -18,6 +19,9 @@ import {
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import cls from './ArticleDetails.module.scss'
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 
 const reducers: ReducersList = {
   articleDetails: articleDetailsReducer,
@@ -35,6 +39,37 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   const article = useSelector(getArticleDetailsData)
   const isLoading = useSelector(getArticleDetailsIsLoading)
   const error = useSelector(getArticleDetailsError)
+
+  const renderBlock = useCallback((block: ArticleBlock) => {
+    switch (block.type) {
+    case ArticleBlockType.CODE:
+      return (
+        <ArticleCodeBlockComponent
+          key={block.id}
+          block={block}
+          className={cls.block}
+        />
+      )
+    case ArticleBlockType.IMAGE:
+      return (
+        <ArticleImageBlockComponent
+          key={block.id}
+          block={block}
+          className={cls.block}
+        />
+      )
+    case ArticleBlockType.TEXT:
+      return (
+        <ArticleTextBlockComponent
+          key={block.id}
+          className={cls.block}
+          block={block}
+        />
+      )
+    default:
+      return null
+    }
+  }, [])
 
   useEffect(() => {
     dispatch(fetchArticleById(id))
@@ -83,6 +118,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
           <Icon Svg={CalendarIcon} className={cls.icon} />
           <Text text={article?.createdAt} />
         </div>
+        {article?.blocks.map(renderBlock)}
       </>
     )
   }
