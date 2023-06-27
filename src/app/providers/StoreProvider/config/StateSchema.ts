@@ -2,6 +2,7 @@ import {
   AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { ArticleDetailsSchema } from 'entities/Article'
+import { ArticleDetailsCommentsSchema } from 'pages/AritcleDetailsPage'
 import { Dispatch, CombinedState } from 'redux'
 import { To } from '@remix-run/router'
 import { AxiosInstance, AxiosStatic } from 'axios'
@@ -19,6 +20,7 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
+  ArticleDetailsComments?: ArticleDetailsCommentsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
