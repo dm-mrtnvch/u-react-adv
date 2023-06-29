@@ -118,14 +118,28 @@
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUTRQeL8OZ17py70XWyxBfNX9hfuU50QxyM_Y2c9biDR39zsss1_kWsuq_yKgeSsb_3c&usqp=CAU"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "John",
+      "lastname": "Doe",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "admin213",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMHsRKHiNx_EEUE8itsFYWjFamWu3joJW_UPDeXqLoYJ4p6fEKxYeOftetkpoSQgFnLkw&usqp=CAU"
+    },
+    {
+      "id": "2",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUTRQeL8OZ17py70XWyxBfNX9hfuU50QxyM_Y2c9biDR39zsss1_kWsuq_yKgeSsb_3c&usqp=CAU"
+    }
+  ]
 }
