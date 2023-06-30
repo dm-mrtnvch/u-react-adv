@@ -29,5 +29,7 @@
   "main-page": "main-page",
   "article-page-not-found": "article-page-not-found",
   "error-while-render-article": "error-while-render-article",
-  "no-comments": "no-comments"
+  "no-comments": "no-comments",
+  "type-comment": "type-comment",
+  "send": "send"
 }

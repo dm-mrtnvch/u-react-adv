@@ -2,6 +2,7 @@ import {
   AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { ArticleDetailsSchema } from 'entities/Article'
+import { AddCommentFormSchema } from 'features/addCommentForm'
 import { ArticleDetailsCommentsSchema } from 'pages/AritcleDetailsPage'
 import { Dispatch, CombinedState } from 'redux'
 import { To } from '@remix-run/router'
@@ -21,6 +22,7 @@ export interface StateSchema {
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsSchema
+  addCommentForm?: AddCommentFormSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
