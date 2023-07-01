@@ -2,7 +2,9 @@ import { ArticleDetails } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
 import { AddCommentForm } from 'features/addCommentForm'
 import { addCommentForArticle } from 'pages/AritcleDetailsPage/model/services/AddCommentForArticle/AddCommentForArticle'
-import { fetchCommentsByArticleId } from 'pages/AritcleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import {
+  fetchCommentsByArticleId,
+} from 'pages/AritcleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'

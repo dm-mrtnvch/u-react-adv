@@ -132,6 +132,12 @@
       "articleId": "1",
       "userId": "1",
       "id": "xY-8nPZ"
+    },
+    {
+      "text": "123",
+      "articleId": "1",
+      "userId": "2",
+      "id": "SQ1lGsM"
     }
   ],
   "users": [
@@ -153,8 +159,8 @@
   "profile": [
     {
       "id": "1",
-      "first": "John",
-      "lastname": "Doe",
+      "first": "John 1",
+      "lastname": "Doe 1",
       "age": 465,
       "currency": "RUB",
       "country": "Belarus",
