@@ -1,4 +1,3 @@
-import { sendComment } from 'features/addCommentForm/model/services/sendComment/sendComment'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
@@ -13,13 +12,15 @@ import cls from './AddCommentForm.module.scss'
 
 export interface AddCommentFormProps {
   className?: string
+  onSendComment: (text: string) => void
 }
 
 const reducers: ReducersList = {
   addCommentForm: addCommentFormReducer,
 }
 
-const AddCommentForm = ({ className }: AddCommentFormProps) => {
+const AddCommentForm = (props: AddCommentFormProps) => {
+  const { className, onSendComment } = props
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const text = useSelector(getAddCommentFormText)
@@ -29,9 +30,10 @@ const AddCommentForm = ({ className }: AddCommentFormProps) => {
     dispatch(addCommentFormActions.setText(value))
   }, [dispatch])
 
-  const onSendComment = useCallback(() => {
-    dispatch(sendComment())
-  }, [dispatch])
+  const onSendHandler = useCallback(() => {
+    onSendComment(text || '')
+    onCommentTextChange('')
+  }, [onCommentTextChange, onSendComment, text])
 
   return (
     <DynamicModuleLoader reducers={reducers}>
@@ -44,7 +46,7 @@ const AddCommentForm = ({ className }: AddCommentFormProps) => {
         />
         <Button
           theme={ButtonTheme.OUTLINE}
-          onClick={onSendComment}
+          onClick={onSendHandler}
         >
           {t('send')}
         </Button>
