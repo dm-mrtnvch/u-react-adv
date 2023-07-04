@@ -1,6 +1,7 @@
-import { memo } from 'react'
+import { memo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { useHover } from 'shared/lib/hooks/useHover/useHover'
 import { Card } from 'shared/ui/Card/Card'
 import { Text } from 'shared/ui/Text/Text'
 import { Icon } from 'shared/ui/Icon/Icon'
@@ -17,6 +18,7 @@ interface ArticlesListItemProps {
 export const ArticlesListItem = memo((props: ArticlesListItemProps) => {
   const { className, article, view } = props
   const { t } = useTranslation()
+  const [isHover, bindHover] = useHover()
 
   if (view === ArticleView.BIG) {
     return (
@@ -27,7 +29,7 @@ export const ArticlesListItem = memo((props: ArticlesListItemProps) => {
   }
 
   return (
-    <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+    <div {...bindHover} className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
       <Card className={cls.card} >
         <div className={cls.imageWrapper}>
           <img src={article.img} className={cls.img} alt={article.title} />
