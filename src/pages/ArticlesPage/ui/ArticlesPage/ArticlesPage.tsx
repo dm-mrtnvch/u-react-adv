@@ -1,4 +1,4 @@
-import { Article, ArticlesList } from 'entities/Article'
+import { Article, ArticlesList, ArticleView } from 'entities/Article'
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -18,6 +18,11 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
+    user: {
+      id: '1',
+      username: 'John Doe',
+      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMHsRKHiNx_EEUE8itsFYWjFamWu3joJW_UPDeXqLoYJ4p6fEKxYeOftetkpoSQgFnLkw&usqp=CAU',
+    },
     type: [
       'IT',
     ],
@@ -86,7 +91,15 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   return (
     // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticlesList articles={[article]} />
+      <ArticlesList
+        view={ArticleView.BIG}
+        articles={new Array(16)
+          .fill(0)
+          .map((item, index) => ({
+            ...article,
+            id: String(index),
+          }))}
+      />
     </div>
   )
 }

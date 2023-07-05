@@ -31,5 +31,6 @@
   "error-while-render-article": "error-while-render-article",
   "no-comments": "no-comments",
   "type-comment": "type-comment",
-  "send": "send"
+  "send": "send",
+  "read-more": "read-more"
 }
