@@ -13,6 +13,8 @@
   "authorisation form": "",
   "authorization form": "authorization form",
   "avatar": "avatar",
+  "back": "back",
+  "back-to-articles": "back-to-articles",
   "blabla": "",
   "city": "city",
   "comments": "comments",
@@ -67,5 +69,12 @@
   },
   "Профиль": "Профиль",
   "Редактировать": "Редактировать",
-  "Сохранить": "Сохранить"
+  "Сохранить": "Сохранить",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
