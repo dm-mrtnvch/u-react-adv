@@ -50,7 +50,7 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to'],
       },
     ],
-    'max-len': ['error', { ignoreComments: true, code: 120 }],
+    'max-len': ['error', { ignoreComments: true, code: 140 }],
     semi: ['warn', 'never'],
     'react/jsx-tag-spacing': ['warn', { closingSlash: 'never' }],
     'linebreak-style': 'off',
