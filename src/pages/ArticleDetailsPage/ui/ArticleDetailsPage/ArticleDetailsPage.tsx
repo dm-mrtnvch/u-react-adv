@@ -56,8 +56,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     )
   }
 
-  console.log('')
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>

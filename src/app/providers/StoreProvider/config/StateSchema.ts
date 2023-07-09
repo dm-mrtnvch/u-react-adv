@@ -3,7 +3,7 @@ import {
 } from '@reduxjs/toolkit'
 import { ArticleDetailsSchema } from 'entities/Article'
 import { AddCommentFormSchema } from 'features/addCommentForm'
-import { ArticleDetailsCommentsSchema } from 'pages/AritcleDetailsPage'
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { ArticlesPageSchema } from 'pages/ArticlesPage'
 import { Dispatch, CombinedState } from 'redux'
 import { To } from '@remix-run/router'

@@ -1,5 +1,5 @@
 import { AboutPage } from 'pages/AboutPage'
-import { ArticleDetailsPage } from 'pages/AritcleDetailsPage'
+import { ArticleDetailsPage } from 'pages/ArticleDetailsPage'
 import { ArticlesPage } from 'pages/ArticlesPage'
 import { MainPage } from 'pages/MainPage'
 import { NotFoundPage } from 'pages/NotFoundPage'

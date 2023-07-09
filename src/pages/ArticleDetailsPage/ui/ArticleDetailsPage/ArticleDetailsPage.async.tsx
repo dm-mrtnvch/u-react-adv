@@ -5,5 +5,5 @@ export const ArticleDetailsPageAsync = lazy(() => new Promise((resolve) => {
     // DO NOT USE ON PRODUCTION
     // @ts-ignore
     resolve(import('./ArticleDetailsPage'))
-  }, 1000)
+  }, 400)
 }))
