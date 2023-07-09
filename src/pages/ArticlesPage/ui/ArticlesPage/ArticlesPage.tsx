@@ -14,6 +14,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   return (
     <div className={classNames(cls.ArticlesPage, {}, [className])}>
       <ArticleList
+        isLoading={false}
         view={ArticleView.SMALL}
         articles={[]}
       />

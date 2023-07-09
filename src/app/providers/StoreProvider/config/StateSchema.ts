@@ -4,6 +4,7 @@ import {
 import { ArticleDetailsSchema } from 'entities/Article'
 import { AddCommentFormSchema } from 'features/addCommentForm'
 import { ArticleDetailsCommentsSchema } from 'pages/AritcleDetailsPage'
+import { ArticlesPageSchema } from 'pages/ArticlesPage'
 import { Dispatch, CombinedState } from 'redux'
 import { To } from '@remix-run/router'
 import { AxiosInstance, AxiosStatic } from 'axios'
@@ -23,6 +24,7 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsSchema
   addCommentForm?: AddCommentFormSchema
+  articlesPage? :ArticlesPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
