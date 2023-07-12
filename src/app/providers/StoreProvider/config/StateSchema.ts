@@ -3,6 +3,7 @@ import {
 } from '@reduxjs/toolkit'
 import { ArticleDetailsSchema } from 'entities/Article'
 import { AddCommentFormSchema } from 'features/addCommentForm'
+import { UISchema } from 'features/UI'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { ArticlesPageSchema } from 'pages/ArticlesPage'
 import { Dispatch, CombinedState } from 'redux'
@@ -17,6 +18,7 @@ import { NavigateOptions } from 'react-router/dist/lib/context'
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema,
+  ui: UISchema
 
   // async reducers
   loginForm?: LoginSchema
