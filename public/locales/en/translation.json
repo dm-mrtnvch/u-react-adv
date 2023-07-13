@@ -32,5 +32,12 @@
   "no-comments": "no-comments",
   "type-comment": "type-comment",
   "send": "send",
-  "read-more": "read-more"
+  "read-more": "read-more",
+  "sort by": "sort by",
+  "ascending": "ascending",
+  "descending": "descending",
+  "created at": "created at",
+  "views count": "views count",
+  "title": "title",
+  "by": "by"
 }
