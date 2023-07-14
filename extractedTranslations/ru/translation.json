@@ -49,6 +49,7 @@
   "please reload the page": "please reload the page",
   "please-reload-the-page": "please-reload-the-page",
   "read-more": "read-more",
+  "search": "search",
   "select-country": "select-country",
   "select-currency": "select-currency",
   "send": "send",
@@ -70,6 +71,7 @@
   "Обновить страницу": "Обновить страницу",
   "Отменить": "Отменить",
   "Переключить": "Переключить",
+  "Поиск": "Поиск",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Произошла ошибка при загрузке статьи": {
     "": ""
