@@ -1,6 +1,7 @@
 import { ArticleSortField, ArticleView, ArticleViewSelector } from 'entities/Article'
 import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector'
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
+import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
 import { SortOrder } from 'shared/types'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -33,6 +34,8 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
     dispatch(fetchArticlesList({ replace: true }))
   }, [dispatch])
 
+  const debouncedFetchData = useDebounce(fetchData, 500)
+
   const onChangeView = useCallback((view: ArticleView) => {
     dispatch(articlesPageActions.setView(view))
     dispatch(articlesPageActions.setPage(1))
@@ -54,8 +57,8 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
   const onChangeSearch = useCallback((search: string) => {
     dispatch(articlesPageActions.setSearch(search))
     dispatch(articlesPageActions.setPage(1))
-    fetchData()
-  }, [dispatch, fetchData])
+    debouncedFetchData()
+  }, [debouncedFetchData, dispatch])
 
   return (
     <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
