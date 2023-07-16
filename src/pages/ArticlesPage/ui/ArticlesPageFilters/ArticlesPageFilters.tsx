@@ -1,19 +1,23 @@
-import { ArticleSortField, ArticleView, ArticleViewSelector } from 'entities/Article'
+import {
+  ArticleSortField, ArticleTypeTabs, ArticleView, ArticleViewSelector,
+} from 'entities/Article'
+import { ArticleType } from 'entities/Article/model/types/article'
 import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector'
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
 import { SortOrder } from 'shared/types'
-import { memo, useCallback } from 'react'
+import { memo, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Card } from 'shared/ui/Card/Card'
 import { Input } from 'shared/ui/Input/Input'
+import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs'
 import { articlesPageActions } from '../../model/slices/articlesPageSlice'
 import {
   getArticlesPageOrder, getArticlesPageSearch,
-  getArticlesPageSort,
+  getArticlesPageSort, getArticlesPageType,
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors'
 import cls from './ArticlesPageFilters.module.scss'
@@ -29,6 +33,7 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
   const sort = useSelector(getArticlesPageSort)
   const order = useSelector(getArticlesPageOrder)
   const search = useSelector(getArticlesPageSearch)
+  const type = useSelector(getArticlesPageType)
 
   const fetchData = useCallback(() => {
     dispatch(fetchArticlesList({ replace: true }))
@@ -60,6 +65,12 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
     debouncedFetchData()
   }, [debouncedFetchData, dispatch])
 
+  const onChangeType = useCallback((value: ArticleType) => {
+    dispatch(articlesPageActions.setType(value))
+    dispatch(articlesPageActions.setPage(1))
+    fetchData()
+  }, [fetchData, dispatch])
+
   return (
     <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
       <div className={cls.sortWrapper}>
@@ -78,6 +89,11 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
           placeholder={t('search')}
         />
       </Card>
+      <ArticleTypeTabs
+        value={type}
+        onChangeType={onChangeType}
+        className={cls.tabs}
+      />
     </div>
   )
 })
