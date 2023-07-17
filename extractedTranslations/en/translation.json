@@ -53,6 +53,7 @@
   "please reload the page": "please reload the page",
   "please-reload-the-page": "please-reload-the-page",
   "read-more": "read-more",
+  "recommend": "recommend",
   "science": "science",
   "search": "search",
   "select-country": "select-country",
@@ -73,6 +74,8 @@
   "user name": "user name",
   "username": "username",
   "views count": "views count",
+  "Комментарии": "Комментарии",
+  "Назад к списку": "Назад к списку",
   "Обновить страницу": "Обновить страницу",
   "Отменить": "Отменить",
   "Переключить": "",
@@ -83,7 +86,10 @@
   },
   "Профиль": "Профиль",
   "Редактировать": "Редактировать",
+  "Рекомендуем": "Рекомендуем",
   "Сохранить": "Сохранить",
+  "Статьи не найдены": "Статьи не найдены",
+  "Статья не найдена": "Статья не найдена",
   "Читать далее": {
     "": {
       "": {

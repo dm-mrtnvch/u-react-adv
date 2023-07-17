@@ -1,4 +1,7 @@
 export {
+  ArticleDetailsRecommendationsSchema,
+} from './model/types/ArticleDetailsRecommendationsSchema'
+export {
   ArticleDetailsPageAsync as ArticleDetailsPage,
 } from './ui/ArticleDetailsPage/ArticleDetailsPage.async'
 

@@ -29,6 +29,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
   } = props
   const { t } = useTranslation()
 
+  console.log('ar', articles)
+
   const renderArticle = (article: Article) => (
     <ArticleListItem
       article={article}
