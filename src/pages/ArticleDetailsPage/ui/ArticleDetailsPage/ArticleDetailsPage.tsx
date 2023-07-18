@@ -1,6 +1,7 @@
 import { ArticleDetails, ArticleList } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
 import { AddCommentForm } from 'features/addCommentForm'
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
@@ -21,9 +22,8 @@ import {
 } from '../../model/selectors/recommendations'
 import { addCommentForArticle } from '../../model/services/AddCommentForArticle/AddCommentForArticle'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slices/articleDetailsCommentsSlice'
+import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice'
 import {
-  articleDetailsPageRecommendationsReducer,
   getArticleRecommendations,
 } from '../../model/slices/articleDetailsPageRecommendationsSlice'
 import cls from './ArticleDetailsPage.module.scss'
@@ -33,8 +33,7 @@ interface ArticleDetailsPageProps {
 }
 
 const reducers: ReducersList = {
-  articleDetailsComments: articleDetailsCommentsReducer,
-  articleDetailsRecommendations: articleDetailsPageRecommendationsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
 }
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
@@ -85,6 +84,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
           articles={recommendations}
           isLoading={recommendationsIsLoading}
           className={cls.recommendations}
+          target="_blank"
         />
         <Text
           size={TextSize.L}

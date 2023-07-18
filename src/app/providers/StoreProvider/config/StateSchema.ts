@@ -5,6 +5,7 @@ import { ArticleDetailsSchema } from 'entities/Article'
 import { AddCommentFormSchema } from 'features/addCommentForm'
 import { UISchema } from 'features/UI'
 import { ArticleDetailsCommentsSchema, ArticleDetailsRecommendationsSchema } from 'pages/ArticleDetailsPage'
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types'
 import { ArticlesPageSchema } from 'pages/ArticlesPage'
 import { Dispatch, CombinedState } from 'redux'
 import { AxiosInstance, AxiosStatic } from 'axios'
@@ -23,10 +24,9 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
-  articleDetailsComments?: ArticleDetailsCommentsSchema
-  articleDetailsRecommendations?: ArticleDetailsRecommendationsSchema
   addCommentForm?: AddCommentFormSchema
   articlesPage? :ArticlesPageSchema
+  articleDetailsPage?: ArticleDetailsPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
