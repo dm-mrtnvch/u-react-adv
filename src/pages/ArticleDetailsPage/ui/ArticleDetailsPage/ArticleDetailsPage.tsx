@@ -2,6 +2,7 @@ import { ArticleDetails, ArticleList } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
 import { AddCommentForm } from 'features/addCommentForm'
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices'
+import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
@@ -45,15 +46,10 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
   const recommendationsError = useSelector(getArticleRecommendationsError)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
-  const navigate = useNavigate()
 
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
   }, [dispatch])
-
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles)
-  }, [navigate])
 
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
@@ -71,9 +67,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <Button onClick={onBackToList}>
-          {t('back-to-articles')}
-        </Button>
+        <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
         <Text
           size={TextSize.L}

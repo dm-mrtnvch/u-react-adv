@@ -45,5 +45,8 @@
   "science": "science",
   "economics": "economics",
   "all": "all",
-  "no articles found": "no articles found"
+  "no articles found": "no articles found",
+  "edit": "edit",
+  "blog-app": "blog-app",
+  "create article": "create article"
 }
