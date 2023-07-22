@@ -1,4 +1,4 @@
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types'
+import { ArticleDetailsPageSchema } from './model/types'
 
 export {
   ArticleDetailsRecommendationsSchema,

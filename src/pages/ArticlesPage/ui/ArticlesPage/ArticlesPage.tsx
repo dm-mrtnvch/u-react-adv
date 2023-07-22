@@ -1,5 +1,4 @@
-import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article'
-import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters'
+import { ArticleList } from 'entities/Article'
 import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -8,14 +7,14 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Page } from 'widgets/Page/Page'
 import { useSearchParams } from 'react-router-dom'
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 import {
-  getArticlesPageInited,
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors'
-import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice'
+import { articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice'
 import cls from './ArticlesPage.module.scss'
 
 interface ArticlesPageProps {

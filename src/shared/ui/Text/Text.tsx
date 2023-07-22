@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import { useTranslation } from 'react-i18next'
 import { classNames, Mods } from 'shared/lib/classNames/classNames'
 import cls from './Text.module.scss'
 
