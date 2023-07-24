@@ -2,7 +2,6 @@ import React, { memo, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
-import { HStack } from 'shared/ui/Stack/HStack/HStack'
 import { VStack } from 'shared/ui/Stack/VStack/VStack'
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
@@ -46,7 +45,11 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
       >
         {collapsed ? '>' : '<'}
       </Button>
-      <VStack gap="8" className={cls.items}>
+      <VStack
+        gap="8"
+        role="navigation"
+        className={cls.items}
+      >
         {itemsList}
       </VStack>
       {/* <div className={cls.items}> */}
