@@ -1,5 +1,6 @@
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
 import { Select } from 'shared/ui/Select/Select'
 import { Country } from '../../model/types/country'
 
@@ -28,12 +29,15 @@ export const CountrySelect = memo(
     }, [onChange])
 
     return (
-      <Select
-        options={options}
-        value={value}
-        label={t('select-country')}
-        onChange={onChangeHandler}
+      <ListBox
         readonly={readonly}
+        className={className}
+        items={options}
+        value={value}
+        onChange={onChangeHandler}
+        defaultValue={t('select-country')}
+        label={t('select-country')}
+        direction="top"
       />
     )
   },
