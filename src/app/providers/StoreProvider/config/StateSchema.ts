@@ -14,11 +14,13 @@ import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
 import { LoginSchema } from 'features/AuthByUsername/model/types/loginSchema'
 import { NavigateOptions } from 'react-router/dist/lib/context'
+import { rtkApi } from 'shared/api/rtkApi'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema,
   ui: UISchema
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
   // async reducers
   loginForm?: LoginSchema
