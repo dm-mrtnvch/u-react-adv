@@ -4,5 +4,6 @@
   "incorrect-user-data": "incorrect-user-data",
   "incorrect-country": "incorrect-country",
   "incorrect-age": "incorrect-age",
-  "server-error": "server-error"
+  "server-error": "server-error",
+  "no profile": "no profile"
 }

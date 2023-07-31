@@ -50,5 +50,6 @@
   "blog-app": "blog-app",
   "create article": "create article",
   "logout": "logout",
-  "profile": "profile"
+  "profile": "profile",
+  "error while articles render": "error while articles render"
 }
