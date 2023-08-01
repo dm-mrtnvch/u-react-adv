@@ -1,0 +1,91 @@
+/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../../node_modules/sass-loader/dist/cjs.js!./Page.module.scss */
+
+/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
+
+/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */
+
+/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */
+
+/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */
+
+/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */
+
+/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */
+
+/*! ../../../node_modules/css-loader/dist/runtime/api.js */
+
+/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */
+
+/*! ../Flex/Flex */
+
+/*! ./HStack/HStack */
+
+/*! ./Page.module.scss */
+
+/*! ./VStack/VStack */
+
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */
+
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */
+
+/*! ./node_modules/react-refresh/runtime.js */
+
+/*! features/UI */
+
+/*! react */
+
+/*! react-redux */
+
+/*! react-router-dom */
+
+/*! react/jsx-runtime */
+
+/*! shared/lib/classNames/classNames */
+
+/*! shared/lib/hooks/useAppDispatch/useAppDispatch */
+
+/*! shared/lib/hooks/useInfiniteScroll/useInfiniteScroll */
+
+/*! shared/lib/hooks/useInitialEffect/useInitialEffect */
+
+/*! shared/lib/hooks/useThrottle/useThrottle */
+
+/*!***********************************!*\
+  !*** ./src/widgets/Page/Page.tsx ***!
+  \***********************************/
+
+/*!**************************************!*\
+  !*** ./src/shared/ui/Stack/index.ts ***!
+  \**************************************/
+
+/*!*******************************************!*\
+  !*** ./src/widgets/Page/Page.module.scss ***!
+  \*******************************************/
+
+/*!***********************************************!*\
+  !*** ./src/shared/ui/Stack/HStack/HStack.tsx ***!
+  \***********************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/shared/lib/hooks/useThrottle/useThrottle.ts ***!
+  \*********************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts ***!
+  \***************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts ***!
+  \*******************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts ***!
+  \*********************************************************************/
+
+/*!*******************************************************************************!*\
+  !*** ./src/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader.tsx ***!
+  \*******************************************************************************/
+
+/*!****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/widgets/Page/Page.module.scss ***!
+  \****************************************************************************************************************************************************/

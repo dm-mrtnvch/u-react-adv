@@ -1,0 +1,13 @@
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */
+
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */
+
+/*! ./node_modules/react-refresh/runtime.js */
+
+/*! react-i18next */
+
+/*! react/jsx-runtime */
+
+/*!**********************************************!*\
+  !*** ./src/pages/AboutPage/ui/AboutPage.tsx ***!
+  \**********************************************/
