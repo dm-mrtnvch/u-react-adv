@@ -51,5 +51,6 @@
   "create article": "create article",
   "logout": "logout",
   "profile": "profile",
-  "error while articles render": "error while articles render"
+  "error while articles render": "error while articles render",
+  "admin": "admin"
 }
