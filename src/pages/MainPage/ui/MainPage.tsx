@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ListBox } from 'shared/ui/ListBox/ListBox'
 
 const MainPage = () => {
   const [value, setValue] = useState('')

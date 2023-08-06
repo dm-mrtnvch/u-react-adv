@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { VStack } from 'shared/ui/Stack/VStack/VStack'
 import { Page } from 'widgets/Page/Page'
-import { Text } from 'shared/ui/Text/Text'
 
 interface ProfilePageProps {
   className?: string
@@ -13,10 +12,6 @@ interface ProfilePageProps {
 const ProfilePage = ({ className }: ProfilePageProps) => {
   const { t } = useTranslation('profile')
   const { id } = useParams<{ id: string }>()
-
-  if (!id) {
-    return <Text text={t('no profile')} />
-  }
 
   return (
     <Page className={classNames('', {}, [className])}>
