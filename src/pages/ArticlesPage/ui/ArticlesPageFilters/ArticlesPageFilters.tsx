@@ -1,7 +1,7 @@
 import {
   ArticleSortField, ArticleTypeTabs, ArticleView, ArticleViewSelector,
 } from 'entities/Article'
-import { ArticleType } from 'entities/Article/model/types/article'
+import { ArticleType } from 'entities/Article/model/consts/consts'
 import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
 import { SortOrder } from 'shared/types'

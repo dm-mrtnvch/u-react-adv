@@ -10,6 +10,7 @@ import { memo, useCallback } from 'react'
 import { VStack } from 'shared/ui/Stack'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ProfileCard } from 'entities/Profile/ui/ProfileCard/ProfileCard'
+import { ValidateProfileError } from '../../model/consts/consts'
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
 import {
   EditableProfileCardHeader,
@@ -20,7 +21,6 @@ import { getProfileValidateErrors } from '../../model/selectors/getProfileValida
 import {
   getProfileIsLoading,
 } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
-import { ValidateProfileError } from '../../model/types/editableProfileCardSchema'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
 
