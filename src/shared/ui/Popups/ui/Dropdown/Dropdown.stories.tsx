@@ -12,6 +12,7 @@ export default {
   },
 } as ComponentMeta<typeof Dropdown>
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />
 
 export const Normal = Template.bind({})
