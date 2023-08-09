@@ -1,0 +1,217 @@
+/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../../../../node_modules/sass-loader/dist/cjs.js!./ArticleDetailsPage.module.scss */
+
+/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../../../../node_modules/sass-loader/dist/cjs.js!./CommentCard.module.scss */
+
+/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
+
+/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */
+
+/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */
+
+/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */
+
+/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */
+
+/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */
+
+/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */
+
+/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */
+
+/*! ../../api/articleRecommendationsApi */
+
+/*! ../../model/selectors/article */
+
+/*! ../../model/selectors/comments */
+
+/*! ../../model/services/AddCommentForArticle/AddCommentForArticle */
+
+/*! ../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId */
+
+/*! ../../model/slices */
+
+/*! ../../model/slices/articleDetailsCommentsSlice */
+
+/*! ../ArticleDetailsComments/ArticleDetailsComments */
+
+/*! ../ArticleDetailsPageHeader/ArticleDetailsPageHeader */
+
+/*! ../CommentCard/CommentCard */
+
+/*! ../addCommentForm/ui/AddCommentForm/AddCommentForm.async */
+
+/*! ../fetchCommentsByArticleId/fetchCommentsByArticleId */
+
+/*! ../services/fetchArticleRecommendations/fetchArticleRecommendations */
+
+/*! ../services/fetchCommentsByArticleId/fetchCommentsByArticleId */
+
+/*! ./AddCommentForm */
+
+/*! ./ArticleDetailsPage.module.scss */
+
+/*! ./CommentCard.module.scss */
+
+/*! ./articleDetailsCommentsSlice */
+
+/*! ./articleDetailsPageRecommendationsSlice */
+
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */
+
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */
+
+/*! ./node_modules/react-refresh/runtime.js */
+
+/*! ./ui/ArticleRecommendationsList/ArticleRecommendationsList */
+
+/*! ./ui/CommentList/CommentList */
+
+/*! @babel/runtime/helpers/asyncToGenerator */
+
+/*! @babel/runtime/regenerator */
+
+/*! @reduxjs/toolkit */
+
+/*! entities/Article */
+
+/*! entities/Article/model/selectors/articleDetails */
+
+/*! entities/Comment */
+
+/*! entities/User */
+
+/*! features/addCommentForm */
+
+/*! features/articleRecommendationsList */
+
+/*! import() */
+
+/*! react */
+
+/*! react-i18next */
+
+/*! react-redux */
+
+/*! react-router-dom */
+
+/*! react/jsx-runtime */
+
+/*! shared/api/rtkApi */
+
+/*! shared/config/routeConfig/routeConfig */
+
+/*! shared/lib/classNames/classNames */
+
+/*! shared/lib/components/DynamicModuleLoader/DynamicModuleLoader */
+
+/*! shared/lib/hooks/useAppDispatch/useAppDispatch */
+
+/*! shared/lib/hooks/useInitialEffect/useInitialEffect */
+
+/*! shared/ui/AppLink/AppLink */
+
+/*! shared/ui/Avatar/Avatar */
+
+/*! shared/ui/Button/Button */
+
+/*! shared/ui/Loader/Loader */
+
+/*! shared/ui/Skeleton/Skeleton */
+
+/*! shared/ui/Stack */
+
+/*! shared/ui/Text/Text */
+
+/*! widgets/Page/Page */
+
+/*!***************************************!*\
+  !*** ./src/entities/Comment/index.ts ***!
+  \***************************************/
+
+/*!**********************************************!*\
+  !*** ./src/features/addCommentForm/index.ts ***!
+  \**********************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/features/articleRecommendationsList/index.ts ***!
+  \**********************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/slices/index.ts ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/entities/Comment/ui/CommentCard/CommentCard.tsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/entities/Comment/ui/CommentList/CommentList.tsx ***!
+  \*************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/selectors/article.ts ***!
+  \*****************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/selectors/comments.ts ***!
+  \******************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./src/entities/Comment/ui/CommentCard/CommentCard.module.scss ***!
+  \*********************************************************************/
+
+/*!********************************************************************************!*\
+  !*** ./src/features/addCommentForm/ui/AddCommentForm/AddCommentForm.async.tsx ***!
+  \********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** ./src/features/articleRecommendationsList/api/articleRecommendationsApi.ts ***!
+  \**********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice.ts ***!
+  \**********************************************************************************/
+
+/*!***********************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetailsPage.tsx ***!
+  \***********************************************************************************/
+
+/*!*******************************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments.tsx ***!
+  \*******************************************************************************************/
+
+/*!*******************************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetailsPage.module.scss ***!
+  \*******************************************************************************************/
+
+/*!*********************************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/slices/articleDetailsPageRecommendationsSlice.ts ***!
+  \*********************************************************************************************/
+
+/*!***********************************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader.tsx ***!
+  \***********************************************************************************************/
+
+/*!**************************************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/services/AddCommentForArticle/AddCommentForArticle.ts ***!
+  \**************************************************************************************************/
+
+/*!**********************************************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId.ts ***!
+  \**********************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./src/features/articleRecommendationsList/ui/ArticleRecommendationsList/ArticleRecommendationsList.tsx ***!
+  \**************************************************************************************************************/
+
+/*!****************************************************************************************************************!*\
+  !*** ./src/pages/ArticleDetailsPage/model/services/fetchArticleRecommendations/fetchArticleRecommendations.ts ***!
+  \****************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/entities/Comment/ui/CommentCard/CommentCard.module.scss ***!
+  \******************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetailsPage.module.scss ***!
+  \****************************************************************************************************************************************************************************************************/

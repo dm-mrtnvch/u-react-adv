@@ -1,0 +1,17 @@
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */
+
+/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */
+
+/*! ./node_modules/react-refresh/runtime.js */
+
+/*! @babel/runtime/helpers/slicedToArray */
+
+/*! react */
+
+/*! react-i18next */
+
+/*! react/jsx-runtime */
+
+/*!********************************************!*\
+  !*** ./src/pages/MainPage/ui/MainPage.tsx ***!
+  \********************************************/
