@@ -1,20 +1,20 @@
 import {
   AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit'
-import { ArticleDetailsSchema } from 'entities/Article'
-import { AddCommentFormSchema } from 'features/addCommentForm'
-import { ProfileSchema } from 'features/editableProfileCard'
-import { UISchema } from 'features/UI'
-import { ArticleDetailsCommentsSchema, ArticleDetailsRecommendationsSchema } from 'pages/ArticleDetailsPage'
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types'
-import { ArticlesPageSchema } from 'pages/ArticlesPage'
 import { Dispatch, CombinedState } from 'redux'
 import { AxiosInstance, AxiosStatic } from 'axios'
-import { CounterSchema } from 'entities/Counter'
-import { UserSchema } from 'entities/User'
-import { LoginSchema } from 'features/AuthByUsername/model/types/loginSchema'
 import { NavigateOptions } from 'react-router/dist/lib/context'
-import { rtkApi } from 'shared/api/rtkApi'
+import { rtkApi } from '@/shared/api/rtkApi'
+import { ArticleDetailsSchema } from '@/entities/Article'
+import { AddCommentFormSchema } from '@/features/addCommentForm'
+import { ProfileSchema } from '@/features/editableProfileCard'
+import { UISchema } from '@/features/UI'
+import { ArticleDetailsCommentsSchema, ArticleDetailsRecommendationsSchema } from '@/pages/ArticleDetailsPage'
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage/model/types'
+import { ArticlesPageSchema } from '@/pages/ArticlesPage'
+import { CounterSchema } from '@/entities/Counter'
+import { UserSchema } from '@/entities/User'
+import { LoginSchema } from '@/features/AuthByUsername/model/types/loginSchema'
 
 export interface StateSchema {
   counter: CounterSchema

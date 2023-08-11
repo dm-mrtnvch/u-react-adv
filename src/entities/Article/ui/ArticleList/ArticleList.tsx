@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import {
   WindowScroller, List, ListRowProps,
 } from 'react-virtualized'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Text, TextSize } from 'shared/ui/Text/Text'
-import { PAGE_ID } from 'widgets/Page/Page'
+import { PAGE_ID } from '@/widgets/Page/Page'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Text, TextSize } from '@/shared/ui/Text/Text'
 import { ArticleView } from '../../model/consts/consts'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { Article } from '../../model/types/article'

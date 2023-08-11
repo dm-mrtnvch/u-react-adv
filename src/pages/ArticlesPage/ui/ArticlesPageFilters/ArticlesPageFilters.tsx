@@ -1,17 +1,17 @@
-import {
-  ArticleSortField, ArticleTypeTabs, ArticleView, ArticleViewSelector,
-} from 'entities/Article'
-import { ArticleType } from 'entities/Article/model/consts/consts'
-import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector'
-import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
-import { SortOrder } from 'shared/types'
 import { memo, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Card } from 'shared/ui/Card/Card'
-import { Input } from 'shared/ui/Input/Input'
+import { SortOrder } from '@/shared/types'
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Card } from '@/shared/ui/Card/Card'
+import { Input } from '@/shared/ui/Input/Input'
+import { ArticleSortSelector } from '@/entities/Article/ui/ArticleSortSelector/ArticleSortSelector'
+import { ArticleType } from '@/entities/Article/model/consts/consts'
+import {
+  ArticleSortField, ArticleTypeTabs, ArticleView, ArticleViewSelector,
+} from '@/entities/Article'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { articlesPageActions } from '../../model/slices/articlesPageSlice'
 import {

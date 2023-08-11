@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
 import React from 'react'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Button, ButtonSize, ButtonTheme } from './Button'
 
 export default {

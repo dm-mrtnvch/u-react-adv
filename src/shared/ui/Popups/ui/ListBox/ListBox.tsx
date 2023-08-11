@@ -1,6 +1,6 @@
 import { Listbox as HListBox } from '@headlessui/react'
 import { Fragment, ReactNode } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { mapDirectionClass } from '../../styles/consts'
 import { DropdownDirection } from '../../../../types/ui'
 import { Button } from '../../../Button/Button'

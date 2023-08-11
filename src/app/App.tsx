@@ -1,10 +1,10 @@
-import { AppRouter } from 'app/providers/router'
-import { useTheme } from 'app/providers/ThemeProvider'
-import { getUserInited, userActions } from 'entities/User'
 import { Suspense, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Navbar } from 'widgets/Navbar'
-import { Sidebar } from 'widgets/Sidebar'
+import { Navbar } from '@/widgets/Navbar'
+import { Sidebar } from '@/widgets/Sidebar'
+import { useTheme } from '@/app/providers/ThemeProvider'
+import { AppRouter } from '@/app/providers/router'
+import { getUserInited, userActions } from '@/entities/User'
 import { classNames } from '../shared/lib/classNames/classNames'
 
 const App = () => {

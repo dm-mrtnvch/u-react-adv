@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_advanced=self.webpackChunkreact_advanced||[]).push([[360],{4360:(a,e,n)=>{n.r(e),n.d(e,{default:()=>d}),n(7294);var c=n(4478),t=n(8979),r=n(5893);const d=function(){var a=(0,c.$)("about").t;return(0,r.jsx)(t.T,{children:a("admin panel")})}}}]);
