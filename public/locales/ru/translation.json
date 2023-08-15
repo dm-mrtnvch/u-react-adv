@@ -52,5 +52,8 @@
   "logout": "logout",
   "profile": "profile",
   "error while articles render": "error while articles render",
-  "admin": "admin"
+  "admin": "admin",
+  "Thanks for rating!": "Thanks for rating!",
+  "Feedback": "Feedback",
+  "close": "close"
 }

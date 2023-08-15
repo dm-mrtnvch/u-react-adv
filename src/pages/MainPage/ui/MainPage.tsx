@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { RatingCard } from '@/entities/Rating'
+import { StarRating } from '@/shared/ui/StarRating/StarRating'
 
 const MainPage = () => {
   const [value, setValue] = useState('')
@@ -13,6 +15,11 @@ const MainPage = () => {
   return (
     <div>
       {t('main-page')}
+      <RatingCard
+        title="please rate"
+        feedbackTitle="please leave feedback"
+        hasFeedback
+      />
     </div>
   )
 }

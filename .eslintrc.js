@@ -61,6 +61,8 @@ module.exports = {
           'as',
           'fallback',
           'border',
+          'title',
+          'feedbackTitle',
         ],
       },
     ],
