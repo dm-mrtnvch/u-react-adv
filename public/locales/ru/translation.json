@@ -55,5 +55,9 @@
   "admin": "admin",
   "Thanks for rating!": "Thanks for rating!",
   "Feedback": "Feedback",
-  "close": "close"
+  "close": "close",
+  "rate article": "rate article",
+  "please rate article": {
+    " it will help to increase quality": "please rate article. it will help to increase quality"
+  }
 }
